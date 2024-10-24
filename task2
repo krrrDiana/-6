@@ -12,7 +12,6 @@ const products = [
 ];
 
 function getProductsNotInPriceRange(products) {
-  // Спочатку фільтруємо товари за ціною, а потім мапимо на їхні назви
   return products
     .filter(product => product.price < 100 || product.price > 500)
     .map(product => product.name);
