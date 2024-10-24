@@ -6,13 +6,8 @@
 function getPopularCategories(products) {
   //Ваш код
   const filteredProducts = products.filter(product => product.sales > 5);
-  
-  // Сортуємо товари за кількістю продажів у порядку спадання
   const sortedProducts = filteredProducts.sort((a, b) => b.sales - a.sales);
-  
-  // Отримуємо унікальні категорії товарів
   const uniqueCategories = [...new Set(sortedProducts.map(product => product.category))];
-  
   return uniqueCategories;
 }
 
